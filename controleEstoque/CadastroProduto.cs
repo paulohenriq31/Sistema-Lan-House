@@ -11,9 +11,9 @@ using System.Data.OleDb;
 
 namespace controleEstoque
 {
-    public partial class Form1 : Form
+    public partial class CadastroProduto : Form
     {
-        public Form1()
+        public CadastroProduto()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace controleEstoque
             //Debug tem que ser mudado para x64
             //configurar a pasta que será usada
             OleDbConnection connection = new OleDbConnection();
-            String endereco = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C://Users//" + Environment.UserName + "//Documents//Sistema-Lan-House//banco//LanHouse.accdb";
+            String endereco = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C://Users//" + Environment.UserName + "//Documents//Sistema-Lan-House//banco//LanHouse.mdb";
 
             connection.ConnectionString = endereco;
 
@@ -86,6 +86,28 @@ namespace controleEstoque
             txtPreco.Enabled = true;
             txtProduto.Enabled = true;
             numericQuantC.Enabled = true;
+
+        }
+
+        private void tb_produtosBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedPreco_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            
+          
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
